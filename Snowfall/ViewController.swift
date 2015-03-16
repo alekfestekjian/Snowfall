@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
-
+    var snowfall = CAEmitterLayer.snowfallEmitter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.layer.addSublayer(snowfall)
+        snowfall.beginTime = CACurrentMediaTime()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
